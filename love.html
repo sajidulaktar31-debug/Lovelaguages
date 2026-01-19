@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ricky ❤️ Sagira</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color:white;
+    text-align:center;
+}
+.container{
+    padding:20px;
+}
+h1{
+    font-size:2.5em;
+}
+.subtitle{
+    font-style:italic;
+    margin-bottom:20px;
+}
+.card{
+    background: rgba(255,255,255,0.2);
+    padding:20px;
+    margin:15px auto;
+    border-radius:15px;
+    max-width:500px;
+}
+img{
+    width:100%;
+    border-radius:12px;
+}
+.love-note p{
+    text-align:left;
+    margin:6px 0;
+}
+.last{
+    color:#ffe600;
+    font-weight:bold;
+}
+footer{
+    margin-top:20px;
+    font-size:0.9em;
+    opacity:0.9;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>❤️ Ricky & Sagira ❤️</h1>
+<p class="subtitle">Our Love Story</p>
+
+<div class="card">
+    <h2>💍 Anniversary</h2>
+    <p>12 January</p>
+    <h3 id="countdown"></h3>
+</div>
+
+<div class="card">
+    <h2>🎵 Our Favourite Song</h2>
+    <audio controls>
+        <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+</div>
+
+<div class="card">
+    <h2>📸 First Meeting</h2>
+    <img src="photo.jpg" alt="First Meeting">
+</div>
+
+<div class="card">
+    <h2>🎂 Birthday</h2>
+    <p>2 June</p>
+</div>
+
+<div class="card love-note">
+    <h2>💌 Love Note</h2>
+    <p>A – Aankhon mein bas tu hi tu hai meri jaan</p>
+    <p>B – Bin tere dil yeh bechain rahta hai har waqt</p>
+    <p>C – Chahat teri chhupi hai har dhadkan mein</p>
+    <p>D – Dil se dil tak tera hi naam hai</p>
+    <p>E – Ek pal bhi tujhse door na reh paaye</p>
+    <p>F – Forever tujhse hi pyaar karunga main</p>
+    <p>G – Gulon se bhi zyada khubsurat hai tu</p>
+    <p>H – Hum dono ka milna tha taqdeer ka khel</p>
+    <p>I – Ishq tera hi toh meri zindagi hai</p>
+    <p>J – Jaaneman, tu meri wajah-e-muskaan hai</p>
+    <p>K – Kabhi na chhodna yeh haath mera</p>
+    <p class="last">L – Love you forever, meri Jaan Sagira 💖</p>
+</div>
+
+<footer>
+    Made with ❤️ by Ricky
+</footer>
+
+</div>
+
+<script>
+const countdown = document.getElementById("countdown");
+const anniversary = new Date("January 12, 2026 00:00:00").getTime();
+
+setInterval(()=>{
+    const now = new Date().getTime();
+    const distance = anniversary - now;
+
+    const days = Math.floor(distance / (1000*60*60*24));
+    const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+    const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
+
+    countdown.innerHTML = `⏳ ${days} Days ${hours} Hours ${minutes} Minutes left ❤️`;
+},1000);
+</script>
+
+</body>
+</html>
